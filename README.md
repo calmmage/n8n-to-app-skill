@@ -10,21 +10,17 @@ and maintain on your own.
 
 ## Install
 
-A skill is a directory containing `SKILL.md`. Install it by placing this repo
-under your Claude Code skills folder — symlink so `git pull` keeps it current.
+One command:
 
-**Personal (all your projects):**
 ```bash
-git clone https://github.com/calmmage/n8n-to-app-skill.git
-ln -s "$(pwd)/n8n-to-app-skill" ~/.claude/skills/n8n-to-app
+curl -fsSL https://raw.githubusercontent.com/calmmage/n8n-to-app-skill/main/install.sh | bash
 ```
 
-**Project-only (just one repo):**
-```bash
-ln -s /path/to/n8n-to-app-skill /your/project/.claude/skills/n8n-to-app
-```
+It installs the skill into `~/.claude/skills/n8n-to-app`. Restart Claude Code
+(or start a new session) and it's ready.
 
-Restart Claude Code (or start a new session) and it'll pick up the skill.
+Already cloned the repo? Just run `./install.sh` — it symlinks your clone so
+`git pull` keeps the skill current.
 
 ## Use
 
