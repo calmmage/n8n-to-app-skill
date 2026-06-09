@@ -2,8 +2,10 @@
 
 > Deployed by the **n8n-to-app** skill. Each line below is **one agentic
 > session**. It points to the skill file that drives that session. When the
-> session is done: tick it, add `completed:DD/MM/YYYY`, and fill in the doc it
-> produced.
+> session is done: tick it, append `completed:DD/MM/YYYY` to the end of the
+> line, and fill in the doc it produced. Example:
+>
+> `- [x] **Conversion research** — follow ... → output: docs/conversion-research.md  completed:09/06/2026`
 
 **Workflow:** <name of the workflow being ported>
 **Skill source:** `<local path to n8n-to-app-skill>` · <github repo url>
