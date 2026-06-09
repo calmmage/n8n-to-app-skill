@@ -1,15 +1,24 @@
 .DEFAULT_GOAL := help
 
-help:  ## Show available commands
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
+help:
+	@awk 'BEGIN {FS = ":.*##"} \
+		/^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5); next } \
+		/^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
 
-setup:  ## Install dependencies
-	@echo "TODO: wire up dependency install (e.g. uv sync / pip install -r requirements.txt)"
-
-run:  ## Run the app locally
+##@ Start here — one entry point per direction
+run:     ## Run the app locally
 	python app/main.py
+deploy:  ## Deploy (manual / docker / cloud)
+	@echo "TODO: deployment entry point"
+monitor: ## Tail logs / health (monitoring)
+	@echo "TODO: monitoring entry point"
+debug:   ## Run with verbose logging / replay (debugging)
+	@echo "TODO: debugging entry point"
+check:   ## Tests + lint (quality & continuous development)
+	@echo "TODO: quality / dev entry point"
 
-test:  ## Run tests
-	@echo "TODO: wire up your test command"
+##@ More
+setup:   ## Install dependencies
+	@echo "TODO: dependency install (uv sync / pip install -r requirements.txt)"
 
-.PHONY: help setup run test
+.PHONY: help run deploy monitor debug check setup

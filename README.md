@@ -16,10 +16,12 @@ One command:
 curl -fsSL https://raw.githubusercontent.com/calmmage/n8n-to-app-skill/main/install.sh | bash
 ```
 
-It installs the skill into `~/.claude/skills/n8n-to-app`. Restart Claude Code
-(or start a new session) and it's ready.
+It asks which agents to install into — **Claude** (`~/.claude/skills`),
+**Codex** (`~/.codex/skills/local`), **Antigravity / agy** (`~/.gemini/skills`)
+— or `all`. Restart the agent and run `/n8n-to-app`.
 
-Already cloned the repo? Just run `./install.sh` — it symlinks your clone so
+Non-interactive: `./install.sh claude codex` or `AGENTS="claude agy" ./install.sh`.
+Already cloned the repo? Run `./install.sh` — it symlinks your clone so
 `git pull` keeps the skill current.
 
 ## Use

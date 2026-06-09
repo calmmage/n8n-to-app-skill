@@ -38,6 +38,7 @@ this skill:
 | Plan | `instructions/02-plan.md` | `docs/port-plan.md` *(migration mode decision)* |
 | Build | `instructions/03-build.md` | working app + `make run` |
 | Deploy | `instructions/04-deploy.md` | deployed app |
+| Review | `instructions/05-review.md` | `docs/review.md` + finalized `make help` |
 
 After each phase: tick the checklist, stamp the date, link the output doc, and
 **stop for the user to review** before starting the next phase.

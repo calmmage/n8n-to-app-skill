@@ -23,3 +23,5 @@
       → output: working app + `make run` demo
 - [ ] **Deploy & hand off** — follow `instructions/04-deploy.md` (pick target: manual / docker / cloud · finalize `AGENTS.md` + ongoing-work entry)
       → output: deployed app
+- [ ] **Sanity check & review** — follow `instructions/05-review.md` (app-specific gaps · simplify/postpone to ship sooner · replace-with-agentic · clear `make help` entry point per direction)
+      → output: `docs/review.md` + finalized `make help`

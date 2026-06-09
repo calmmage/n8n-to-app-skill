@@ -30,5 +30,6 @@ just locally. For prod, confirm error logging + failure notifications fire.
 
 ## Finish
 - In `conversion-checklist.md`: tick **Deploy & hand off**, add
-  `completed:DD/MM/YYYY`. The conversion is complete.
-- Summarize to the user: what's deployed, where, and how to maintain it.
+  `completed:DD/MM/YYYY`.
+- Summarize to the user: what's deployed and where.
+- **Next:** the final sanity-check & review pass (`instructions/05-review.md`).
