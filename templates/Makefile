@@ -7,7 +7,7 @@ help:
 
 ##@ Start here — one entry point per direction
 run:     ## Run the app locally
-	python app/main.py
+	python3 app/main.py
 deploy:  ## Deploy (manual / docker / cloud)
 	@echo "TODO: deployment entry point"
 monitor: ## Tail logs / health (monitoring)

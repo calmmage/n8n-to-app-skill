@@ -21,8 +21,15 @@
       → output: `docs/conversion-research.md`
 - [ ] **Port plan** — follow `instructions/02-plan.md` (migration mode: direct vs rework · node→code mapping · frontend choice)
       → output: `docs/port-plan.md`
-- [ ] **Build** — follow `instructions/03-build.md` (core logic · n8n built-ins: debug/error-logging/dev-prod · optional frontend)
+- [ ] **Build** — follow `instructions/03-build.md`
       → output: working app + `make run` demo
+  - [ ] Core logic — node→code per the plan
+  - [ ] Production features *(Plan fills these in for this workflow — delete any that don't apply)*
+    - [ ] Security — secrets/creds via env, dev vs prod isolation
+    - [ ] Monitoring — failure notifications / healthcheck
+    - [ ] Logs — run + error logging
+    - [ ] Debug entry point — manual test / replay
+  - [ ] Frontend *(only if chosen in the plan)*
 - [ ] **Deploy & hand off** — follow `instructions/04-deploy.md` (pick target: manual / docker / cloud · finalize `AGENTS.md` + ongoing-work entry)
       → output: deployed app
 - [ ] **Sanity check & review** — follow `instructions/05-review.md` (app-specific gaps · simplify/postpone to ship sooner · replace-with-agentic · clear `make help` entry point per direction)

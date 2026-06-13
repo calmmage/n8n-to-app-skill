@@ -11,16 +11,17 @@
 
 ## Do
 Work down the plan's **build order**. Keep `make run` green at every step —
-prefer a thin end-to-end slice first, then fill in.
+prefer a thin end-to-end slice first, then fill in. Tick each sub-item in
+`conversion-checklist.md` as you go.
 
 - **Core logic** — implement each node group per the node→code mapping.
-- **Credentials & integrations** — wire via env / secrets, **never hardcoded**.
 - **Trigger** — reproduce it (cron / webhook / manual run).
-- **Rebuild n8n's built-ins:**
-  - a testing & debugging entry point
-  - error logging + failure notifications
-  - dev vs prod mode separation
-- **Frontend** *(if chosen in the plan)* — telegram bot / tauri / web / CLI.
+- **Production features** — build the ones the plan selected (skip the rest):
+  - **Security** — creds/secrets via env, **never hardcoded**; dev vs prod isolation; PII handling.
+  - **Monitoring** — failure notifications / healthcheck.
+  - **Logs** — run + error logging.
+  - **Debug entry point** — a manual test / replay path.
+- **Frontend** *(only if chosen in the plan)* — telegram bot / tauri / web / CLI.
 
 Stay within the plan. If reality forces a change to the plan, note it back in
 `docs/port-plan.md` rather than silently diverging.
