@@ -47,4 +47,4 @@ review between each.
 
 ## Status
 
-🚧 Active prep for the lecture. Repo is private for now.
+Published!
